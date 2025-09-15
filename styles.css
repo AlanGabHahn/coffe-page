@@ -34,6 +34,7 @@ section {
     right: 0;
     z-index: 99;
     border-bottom: var(--border);
+    background-color: var(--bg);
 
     & section {
         display: flex;
@@ -74,7 +75,11 @@ section {
     font: 1.7rem;
     cursor: pointer;
     margin-top: 1rem;
-    display: inline-block;
+    display: inline-block; 
+
+    &:hover {
+        letter-spacing: 0.1rem;
+    }
 }
 
 .home-container {
@@ -106,3 +111,85 @@ section {
     }
 }
 
+.title {
+    font-size: 4rem;
+    color: var(--main-color);
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 4rem;
+
+    & span {
+        color: #fff;
+        text-transform: uppercase;
+    }
+}
+
+.about {
+    & .row {
+        display: flex;
+        align-items: center;
+        background-color: var(--black);
+        gap: 1.5rem;
+
+        & .content {
+            padding: 2rem;
+
+            & h3 {
+                font-size: 3rem;
+                color: #fff;
+            }
+
+            & p {
+                font-size: 1.6rem;
+                color: #fff;
+                padding: 1rem 0;
+                line-height: 1.8;
+            }
+        }
+    }
+}
+
+.menu {
+    & .box-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+        gap: 1.5rem;
+
+        & .box {
+            text-align: center;
+            border: var(--border);
+            padding: 5rem;
+            cursor: pointer; 
+
+            & img {
+                height: 10rem;
+            }
+
+            & h3 {
+                color: #fff;
+                font-size: 2rem;
+                padding: 1rem 0;
+            }
+
+            & .price {
+                color: #fff;
+                font-size: 2.5rem;
+                padding: 0.5rem 0;
+
+                & span {
+                    font-size: 1.5rem;
+                    text-decoration: line-through;
+                    font-weight: lighter;
+                }
+            }
+
+            &:hover {
+                background-color: #fff;
+                 
+                & >* {
+                    color: var(--black);
+                }
+            }
+        }
+    }
+}
